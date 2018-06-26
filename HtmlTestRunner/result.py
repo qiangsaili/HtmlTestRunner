@@ -347,7 +347,7 @@ class _HtmlTestResult(_TextTestResult):
         if not os.path.exists(dir_to):
             os.makedirs(dir_to)
         path_file = os.path.join(dir_to, report_name)
-        with open(path_file, 'w') as report_file:
+        with open(path_file, 'w', encoding='utf8') as report_file:
             report_file.write(report)
 
     def _exc_info_to_string(self, err, test):
